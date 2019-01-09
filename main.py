@@ -1,0 +1,43 @@
+from server.dice import FairDice
+from server.game import Game
+
+d = FairDice()
+g = Game(3, d)
+g.roll_to_start()
+g.roll_to_start()
+g.roll_to_start()
+print(g.state)
+print("Active: {0}".format(g.active_id))
+g.place_starting_piece(0)
+g.place_starting_piece(1)
+print(g.state)
+print("Active: {0}".format(g.active_id))
+g.place_starting_piece(13)
+g.place_starting_piece(18)
+print(g.state)
+print("Active: {0}".format(g.active_id))
+g.place_starting_piece(20)
+g.place_starting_piece(22)
+print(g.state)
+print("Active: {0}".format(g.active_id))
+g.place_starting_piece(39)
+g.place_starting_piece(49)
+print(g.state)
+print("Active: {0}".format(g.active_id))
+g.place_starting_piece(50)
+g.place_starting_piece(68)
+print(g.state)
+print("Active: {0}".format(g.active_id))
+g.place_starting_piece(37)
+g.place_starting_piece(52)
+print(g.state)
+print("Active: {0}".format(g.active_id))
+for i in range(100):
+    g.start_turn()
+    if g.state.name == "ROBBING":
+        g.rob_tile(i % 19)
+    if g.state.name == "ROBBING_PLAYER":
+        for j in range(3):
+            g.rob_player(j)
+    g.pass_turn()
+print(g.state)
