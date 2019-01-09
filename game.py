@@ -1,9 +1,9 @@
-from server.board import Board
-from server.player import Player
-from server.bank import Bank
-from server.state import GameState
-from server import hand as h
-from server.constants import *
+from board import Board
+from player import Player
+from bank import Bank
+from state import GameState
+import hand as h
+from constants import *
 
 # Need: Concept of game state
 # Client should have some idea of what to do in each state

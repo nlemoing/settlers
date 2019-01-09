@@ -1,4 +1,4 @@
-from server.constants import *
+from constants import *
 
 
 class Land:

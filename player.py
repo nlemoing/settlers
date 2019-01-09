@@ -1,6 +1,5 @@
-from server.constants import *
-import random
-from server import hand as h
+from constants import *
+import hand as h
 
 
 class Player:

@@ -1,10 +1,10 @@
-from server.constants import *
+from constants import *
 import random
-from server.tile import Tile
-from server.land import Land
-from server.path import Path
-from server.transaction import Transaction
-from server import adjacency as adj
+from tile import Tile
+from land import Land
+from path import Path
+from transaction import Transaction
+import adjacency as adj
 
 
 class Board:

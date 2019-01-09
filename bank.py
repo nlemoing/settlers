@@ -1,6 +1,6 @@
-from server.constants import *
+from constants import *
 import random
-from server import hand as h
+import hand as h
 
 
 class Bank:
